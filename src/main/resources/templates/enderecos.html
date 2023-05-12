@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="pt_BR" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Endereços</title>
+</head>
+<body>
+    <h1>Lista de Endereços</h1>
+<!--    Faz um for ou uma interação na variavel enderecos que é uma lista-->
+    <ul th:each="end : ${enderecos}">
+<!--        Para cada endereço cria um item na lista contendo a rua e o numero concatenados-->
+        <li th:text="${end.getRua() + ' - ' + end.getNumero()}"></li>
+    </ul>
+</body>
+</html>
